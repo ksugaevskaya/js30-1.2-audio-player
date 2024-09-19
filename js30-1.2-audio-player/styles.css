@@ -1,0 +1,75 @@
+body {
+  background-color: black;
+}
+
+.blurred-background {
+  margin: 0;
+  height: 100vh;
+  background-image: url(./assets/img/lemonade.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  filter: blur(20px);
+}
+
+.content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 20px;
+  box-shadow: -1px -1px 44px 2px rgb(18, 18, 23);
+}
+
+.music-buttons {
+  height: 50px;
+  width: 50px;
+  filter: invert(1);
+}
+
+.content-container {
+  position: absolute;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  background: linear-gradient(45deg, rgb(72, 72, 72), rgb(132, 117, 90));
+  padding: 20px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+.songs {
+  display: flex;
+  flex-direction: column;
+}
+
+.song-arrow {
+  height: 30px;
+  width: 30px;
+  filter: invert(1);
+}
+
+.lemonade-image {
+  border-radius: 20px;
+}
+
+.song-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.artist-name {
+  color: rgb(193, 255, 6);
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.song-name {
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 17px;
+}
