@@ -4,6 +4,8 @@ const forwardButton = document.getElementById("forward-button");
 const backwardButton = document.getElementById("backward-button");
 const song = document.getElementById("song");
 
+let playNum = 0;
+
 const playButtonClicked = () => {
   console.log("Play Button clicked!");
   playButton.className = "hidden";
@@ -20,10 +22,18 @@ const stopButtonClicked = () => {
 };
 
 const forwardButtonClicked = () => {
+  playNum++;
+  if (playNum > tracks.length - 1) {
+    playNum = 0;
+  }
   console.log("Forward Button clicked!");
 };
 
 const backwardButtonClicked = () => {
+  playNum--;
+  if (playNum < 0) {
+    playNum = tracks.length - 1;
+  }
   console.log("Backward Button clicked!");
 };
 
