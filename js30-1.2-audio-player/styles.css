@@ -19,6 +19,7 @@ body {
   transform: translate(-50%, -50%);
   border-radius: 20px;
   box-shadow: -1px -1px 44px 2px rgb(18, 18, 23);
+  overflow: hidden;
 }
 
 .music-buttons {
@@ -54,6 +55,7 @@ body {
 
 .lemonade-image {
   border-radius: 20px;
+  transition: all 0.5s ease-in-out;
 }
 
 .song-text {
@@ -76,4 +78,8 @@ body {
 
 .hidden {
   display: none;
+}
+
+.scale {
+  transform: scale(1.2);
 }

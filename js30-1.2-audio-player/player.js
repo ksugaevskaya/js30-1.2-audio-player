@@ -17,15 +17,15 @@ const updateSongInfo = () => {
   artist.innerHTML = tracks[playNum].artist;
   songTitle.innerHTML = tracks[playNum].songTitle;
   blurredBackgroundImage.style.backgroundImage = `url(${tracks[playNum].artwork})`;
+  song.src = tracks[playNum].song;
 };
 
 const playButtonClicked = () => {
   console.log("Play Button clicked!");
   playButton.className = "hidden";
   stopButton.className = "music-buttons";
-  song.src = tracks[playNum].song;
-  song.currentTime = 0;
   song.play();
+  artwork.className = "lemonade-image scale";
 };
 
 const stopButtonClicked = () => {
@@ -33,6 +33,7 @@ const stopButtonClicked = () => {
   stopButton.className = "hidden";
   playButton.className = "music-buttons";
   song.pause();
+  artwork.className = "lemonade-image";
 };
 
 const forwardButtonClicked = () => {
@@ -41,6 +42,9 @@ const forwardButtonClicked = () => {
     playNum = 0;
   }
   updateSongInfo();
+  song.currentTime = 0;
+  playButtonClicked();
+
   console.log("Forward Button clicked!");
 };
 
@@ -50,6 +54,8 @@ const backwardButtonClicked = () => {
     playNum = tracks.length - 1;
   }
   updateSongInfo();
+  song.currentTime = 0;
+  playButtonClicked();
   console.log("Backward Button clicked!");
 };
 
