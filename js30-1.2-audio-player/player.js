@@ -10,6 +10,7 @@ const playButtonClicked = () => {
   console.log("Play Button clicked!");
   playButton.className = "hidden";
   stopButton.className = "music-buttons";
+  song.src = tracks[playNum].song;
   song.currentTime = 0;
   song.play();
 };
