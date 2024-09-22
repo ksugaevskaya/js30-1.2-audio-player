@@ -1,0 +1,161 @@
+body {
+  background-color: black;
+}
+
+.blurred-background {
+  margin: 0;
+  height: 100vh;
+  background-image: url(./assets/img/lemonade.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  filter: blur(20px);
+}
+
+.content {
+  width: 396px;
+  height: 396px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 20px;
+  box-shadow: -1px -1px 44px 2px rgb(18, 18, 23);
+  overflow: hidden;
+}
+
+.music-buttons {
+  height: 50px;
+  width: 50px;
+  filter: invert(1);
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.music-buttons:hover {
+  opacity: 0.7;
+}
+
+.content-container {
+  position: absolute;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(45deg, rgb(72, 72, 72), rgb(132, 117, 90));
+  padding: 20px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+.songs {
+  display: flex;
+  flex-direction: column;
+}
+
+.song-arrow {
+  height: 30px;
+  width: 30px;
+  filter: invert(1);
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.song-arrow:hover {
+  opacity: 0.7;
+}
+
+.lemonade-image {
+  border-radius: 20px;
+  transition: all 0.5s ease-in-out;
+}
+
+.song-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.artist-name {
+  color: rgb(193, 255, 6);
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: 25px;
+}
+
+.song-name {
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 17px;
+}
+
+.hidden {
+  display: none;
+}
+
+.scale {
+  transform: scale(1.2);
+}
+
+.footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.rs-logo {
+  width: 50px;
+}
+
+.footer-text {
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 400;
+}
+
+.gh-link {
+  color: #ffb749;
+  text-decoration: none;
+}
+
+.info-list {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.progress-adjust {
+  display: flex;
+  justify-content: center;
+}
+
+.timer {
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.progress {
+  -webkit-appearance: none;
+  margin-top: 20px;
+  width: 160pt;
+  height: 9px;
+  bottom: 5%;
+  border-radius: 30px;
+}
+input[type="range"]::-webkit-slider-runnable-track {
+  background: linear-gradient(to right, #ccdacc, #b3d1ea);
+  border-radius: 30px;
+  height: 9px;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 18px;
+  height: 18px;
+  background: linear-gradient(to right, #ccdacc, #b3d1ea);
+  border-radius: 50%;
+  cursor: pointer;
+  margin-top: -4px;
+}
