@@ -13,6 +13,8 @@ body {
 }
 
 .content {
+  width: 396px;
+  height: 396px;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -26,6 +28,12 @@ body {
   height: 50px;
   width: 50px;
   filter: invert(1);
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.music-buttons:hover {
+  opacity: 0.7;
 }
 
 .content-container {
@@ -50,6 +58,12 @@ body {
   height: 30px;
   width: 30px;
   filter: invert(1);
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.song-arrow:hover {
+  opacity: 0.7;
 }
 
 .lemonade-image {
@@ -66,7 +80,7 @@ body {
   color: rgb(193, 255, 6);
   font-family: Arial, Helvetica, sans-serif;
   font-weight: bold;
-  font-size: 20px;
+  font-size: 25px;
 }
 
 .song-name {
@@ -111,11 +125,6 @@ body {
   justify-content: space-around;
 }
 
-.progress {
-  width: 75%;
-  margin-top: 20px;
-}
-
 .progress-adjust {
   display: flex;
   justify-content: center;
@@ -124,4 +133,29 @@ body {
 .timer {
   color: white;
   font-family: Arial, Helvetica, sans-serif;
+}
+
+.progress {
+  -webkit-appearance: none;
+  margin-top: 20px;
+  width: 160pt;
+  height: 9px;
+  bottom: 5%;
+  border-radius: 30px;
+}
+input[type="range"]::-webkit-slider-runnable-track {
+  background: linear-gradient(to right, #ccdacc, #b3d1ea);
+  border-radius: 30px;
+  height: 9px;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 18px;
+  height: 18px;
+  background: linear-gradient(to right, #ccdacc, #b3d1ea);
+  border-radius: 50%;
+  cursor: pointer;
+  margin-top: -4px;
 }

@@ -10,6 +10,8 @@ const blurredBackgroundImage = document.getElementById(
   "blurred-background-image"
 );
 const endTime = document.getElementById("end-time");
+const currentTime = document.getElementById("current-time");
+const progress = document.getElementById("progress");
 
 let playNum = 0;
 
@@ -61,7 +63,20 @@ const backwardButtonClicked = () => {
   console.log("Backward Button clicked!");
 };
 
+const progressUpdated = () => {
+  song.currentTime = (progress.value * tracks[playNum].durationInSec) / 100;
+};
+
 playButton.addEventListener("click", playButtonClicked);
 stopButton.addEventListener("click", stopButtonClicked);
 forwardButton.addEventListener("click", forwardButtonClicked);
 backwardButton.addEventListener("click", backwardButtonClicked);
+progress.addEventListener("input", progressUpdated);
+
+setInterval(() => {
+  const seconds = Math.floor(song.currentTime % 60);
+  currentTime.innerHTML = `${Math.floor(song.currentTime / 60)}:${
+    seconds > 9 ? seconds : "0" + seconds
+  }`;
+  progress.value = (song.currentTime * 100) / tracks[playNum].durationInSec;
+}, 1000);
