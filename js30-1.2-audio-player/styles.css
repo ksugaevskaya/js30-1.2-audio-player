@@ -34,8 +34,7 @@ body {
   right: 0px;
   bottom: 0px;
   display: flex;
-  flex-direction: row;
-  justify-content: space-around;
+  flex-direction: column;
   background: linear-gradient(45deg, rgb(72, 72, 72), rgb(132, 117, 90));
   padding: 20px;
   border-bottom-left-radius: 20px;
@@ -104,4 +103,25 @@ body {
 .gh-link {
   color: #ffb749;
   text-decoration: none;
+}
+
+.info-list {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.progress {
+  width: 75%;
+  margin-top: 20px;
+}
+
+.progress-adjust {
+  display: flex;
+  justify-content: center;
+}
+
+.timer {
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
 }

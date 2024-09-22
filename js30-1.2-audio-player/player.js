@@ -9,6 +9,7 @@ const songTitle = document.getElementById("song-title");
 const blurredBackgroundImage = document.getElementById(
   "blurred-background-image"
 );
+const endTime = document.getElementById("end-time");
 
 let playNum = 0;
 
@@ -18,6 +19,7 @@ const updateSongInfo = () => {
   songTitle.innerHTML = tracks[playNum].songTitle;
   blurredBackgroundImage.style.backgroundImage = `url(${tracks[playNum].artwork})`;
   song.src = tracks[playNum].song;
+  endTime.innerHTML = tracks[playNum].duration;
 };
 
 const playButtonClicked = () => {

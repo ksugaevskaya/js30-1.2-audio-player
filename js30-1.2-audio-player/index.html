@@ -20,21 +20,32 @@
         <div class="content">
             <img id="artwork" class="lemonade-image" src="./assets/img/lemonade.png">
             <div class="content-container">
-                <div>
-                    <img id="play-button" class="music-buttons" src="./assets/svg/play.png" alt="play">
-                    <img id="stop-button" class="music-buttons hidden" src="./assets/svg/pause.png" alt="pause">
+
+                <div class="info-list">
+                    <div>
+                        <img id="play-button" class="music-buttons" src="./assets/svg/play.png" alt="play">
+                        <img id="stop-button" class="music-buttons hidden" src="./assets/svg/pause.png" alt="pause">
+                    </div>
+                    <div class="song-text">
+                        <span id="artist" class="artist-name">Beyonce</span>
+                        <span id="song-title" class="song-name">Don't Hurt Yourself</span>
+                    </div>
+                    <div class="songs">
+                        <img id="backward-button" class="song-arrow" src="./assets/svg/backward.png" alt="back">
+                        <img id="forward-button" class="song-arrow" src="./assets/svg/forward.png" alt="forward">
+                    </div>
+
                 </div>
-                <div class="song-text">
-                    <span id="artist" class="artist-name">Beyonce</span>
-                    <span id="song-title" class="song-name">Don't Hurt Yourself</span>
-                </div>
-                <div class="songs">
-                    <img id="backward-button" class="song-arrow" src="./assets/svg/backward.png" alt="back">
-                    <img id="forward-button" class="song-arrow" src="./assets/svg/forward.png" alt="forward">
+
+                <div class="progress-adjust">
+                    <p class="timer" id="current-time"> 0:00 </p>
+                    <input class="progress" type="range" id="progress" min="0" max="100">
+                    <p class="timer" id="end-time"> 3:53 </p>
                 </div>
             </div>
+        </div>
 
-            <audio id="song" src="./assets/audio/beyonce.mp3"></audio>
+        <audio id="song" src="./assets/audio/beyonce.mp3"></audio>
 
     </main>
     <footer>
